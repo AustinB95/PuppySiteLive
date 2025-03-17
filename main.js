@@ -182,7 +182,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const imageFiles = ["1.jpg", "2.jpg", "3.jpg", "4.jpg", "5.jpg"];
 
   // Folder where images are stored
-  const imageFolder = "images/";
+  const imageFolder = "images/Green/";
 
   // Loop through image filenames and create img elements
   imageFiles.forEach((fileName) => {
@@ -190,5 +190,23 @@ document.addEventListener("DOMContentLoaded", function () {
     img.src = imageFolder + fileName; // Set the source to the local path
     img.alt = "Grid Image";
     imageGrid.appendChild(img);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const imageGridTwo = document.getElementById("imageGrid2");
+
+  // Array of local image file names
+  const imageFiles = ["1.jpg", "2.jpg", "3.jpg", "4.jpg"];
+
+  // Folder where images are stored
+  const imageFolder = "images/Purple/";
+
+  // Loop through image filenames and create img elements
+  imageFiles.forEach((fileName) => {
+    const img = document.createElement("img");
+    img.src = imageFolder + fileName; // Set the source to the local path
+    img.alt = "Grid Image";
+    imageGridTwo.appendChild(img);
   });
 });
